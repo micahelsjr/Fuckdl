@@ -405,10 +405,18 @@ def dl(ctx, profile, cdm, *_, **__):
     log.info(f" + {remote_vaults} Remote Vault{'' if remote_vaults == 1 else 's'}")
     log.info(f" + {http_vaults} HTTP Vault{'' if http_vaults == 1 else 's'}")
 
-    if not config.downloader:
-        raise log.error("Downloader not specified in config file (fuckdl.yml)")
-
-    downloader = config.downloader.get(service) or config.downloader.get("default")
+    downloader_config = getattr(config, 'downloader', None)
+    if not downloader_config:
+        # Default to n_m3u8dl-re if not specified
+        downloader = "n_m3u8dl-re"
+        log.warning("Downloader not specified in config file (fuckdl.yml), using default: n_m3u8dl-re")
+    elif isinstance(downloader_config, dict):
+        downloader = downloader_config.get(service) or downloader_config.get("default")
+        if not downloader:
+            downloader = "n_m3u8dl-re"
+            log.warning("Downloader not found for service, using default: n_m3u8dl-re")
+    else:
+        downloader = downloader_config
     log.info(f" + Downloader: {DOWNLOADER_MAP.get(str(downloader).lower())}")      
     try:
         device = get_cdm(service, profile, cdm)

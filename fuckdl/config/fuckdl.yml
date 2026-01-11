@@ -12,7 +12,9 @@ arguments: {}
 
 aria2c:
   file_allocation: 'prealloc'
-  
+
+downloader:
+  default: 'n_m3u8dl-re'
 
 cdm:
   default: 'generic_8159_l3'
