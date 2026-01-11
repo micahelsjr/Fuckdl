@@ -62,5 +62,7 @@ fuckdl/config/fuckdl.yml
 build_encrypted.py
 .pyarmor.cfg
 
-# Binaries (optional - uncomment if you don't want to track binaries)
-# binaries/
+# Binaries - exclude large files (>100MB)
+binaries/ffmpeg.exe
+binaries/ffplay.exe
+binaries/ffprobe.exe
