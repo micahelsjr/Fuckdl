@@ -196,7 +196,7 @@ class Amazon(BaseService):
            self.event = True
 
         if data["pageContext"]["subPageType"] == "Movie" or data["pageContext"]["subPageType"] == "Event":
-            card = data["productDetails"]["detail"]
+            card = res["productDetails"]["detail"]
             titles.append(Title(
                 id_=card["catalogId"],
                 type_=Title.Types.MOVIE,
@@ -1611,7 +1611,7 @@ class Amazon(BaseService):
             except:
                 continue
 
-            product_details = data["productDetails"]["detail"]
+            product_details = res["productDetails"]["detail"]
             season_number = product_details.get("seasonNumber", 1)
 
             # Process initial episodes
