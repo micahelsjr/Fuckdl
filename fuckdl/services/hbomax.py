@@ -391,7 +391,7 @@ class HBOMax(BaseService):
             essential_cookies = ['st', 'session', 'transientID']
             filtered_cookies = {}
             
-            # METHOD 1: Look in vinetrimmer cookies folder
+            # METHOD 1: Look in fuckdl cookies folder
             cookies_dir = os.path.join(os.path.dirname(__file__), '..', '..', 'cookies')
             cookies_dir = os.path.abspath(cookies_dir)
             cookies_file = os.path.join(cookies_dir, "hbomax.txt")
@@ -815,4 +815,3 @@ class HBOMax(BaseService):
         filtered_items = list({item.url: item for item in items}.values())
 
         return filtered_items
-

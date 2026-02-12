@@ -492,4 +492,3 @@ class Vudu(BaseService):
         })
         if res["status"] != ["ok"]:
             raise self.log.exit(f" - WebSocket authentication failed: {res['errorDescription'][0]}")
-

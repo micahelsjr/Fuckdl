@@ -43,4 +43,3 @@ class Keybox:
         """Load Keybox from a file path."""
         with open(file, "rb", encoding="utf-8") as fd:
             return cls(fd.read())
-

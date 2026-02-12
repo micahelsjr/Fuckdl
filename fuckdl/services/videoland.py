@@ -405,4 +405,3 @@ class VDL_AUTH:
             pass
 
         return res[0]["uid"]
-

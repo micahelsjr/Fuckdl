@@ -859,4 +859,3 @@ class Netflix(BaseService):
                 return Language.get(language["language"])
         # e.g. get `en` from "A:1:1;2;en;0;|V:2:1;[...]"
         return Language.get(manifest["defaultTrackOrderList"][0]["mediaId"].split(";")[2])
-

@@ -1,4 +1,4 @@
-# vinetrimmer/services/youtube.py
+# fuckdl/services/youtube.py
 
 # Created on: 2024-01-01
 # Authors: Amorä¸¶Aprca
@@ -34,20 +34,20 @@ class YouTube(BaseService):
 
     \b
     Example (Single Video/watch):
-    vt dl youtube dQw4w9WgXcQ
+    fuckdl dl youtube dQw4w9WgXcQ
     
     \b
     Example (Show/Series):
-    vt dl youtube https://www.youtube.com/show/SCguuq8upmH1TmPhSI3nqYqg
+    fuckdl dl youtube https://www.youtube.com/show/SCguuq8upmH1TmPhSI3nqYqg
     
     \b
     Example (Show/Series with specific season):
-    vt dl youtube "https://www.youtube.com/show/SCfgsEfVI3WMNeynOVuBwghw?season=6"
+    fuckdl dl youtube "https://www.youtube.com/show/SCfgsEfVI3WMNeynOVuBwghw?season=6"
     
     \b
     Example (Show/Series with specific season):
     Can only use -W S01E0X-S01E0X
-    vt dl -w S01E01-S01E03 youtube "https://www.youtube.com/show/SCfgsEfVI3WMNeynOVuBwghw?season=6"
+    fuckdl dl -w S01E01-S01E03 youtube "https://www.youtube.com/show/SCfgsEfVI3WMNeynOVuBwghw?season=6"
     """
 
     ALIASES = ["YouTube", "youtube", "yt", "ytbe"] 

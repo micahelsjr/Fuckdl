@@ -10,4 +10,3 @@ class Key:
             name=self.__class__.__name__,
             items=", ".join([f"{k}={repr(v)}" for k, v in self.__dict__.items()])
         )
-

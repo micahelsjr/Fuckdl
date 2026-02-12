@@ -107,4 +107,3 @@ class AXNPlayer(BaseService):
             "origin": "https://hu.axn.com",
             "referer": "https://hu.axn.com/",
         })
-

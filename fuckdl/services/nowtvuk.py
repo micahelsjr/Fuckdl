@@ -375,4 +375,3 @@ class NowTVUK(BaseService):
             sys.exit(1)
 
         return response["userToken"]
-

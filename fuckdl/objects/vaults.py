@@ -400,4 +400,3 @@ class Vaults:
         if vault.type == Vault.Types.HTTP or vault.type == Vault.Types.HTTPAPI:
             return
         self.adb.commit(vault.ticket)
-

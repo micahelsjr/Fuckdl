@@ -102,4 +102,3 @@ class HuluClient(HuluClient):
             derived_key_array.append(device_byte ^ server_byte)
 
         return bytes(derived_key_array), config["key_id"]
-

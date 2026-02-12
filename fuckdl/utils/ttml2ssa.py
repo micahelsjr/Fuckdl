@@ -1175,4 +1175,3 @@ class Ttml2SsaAddon(Ttml2Ssa):
 
         import xbmc
         xbmc.log("Ttml2Ssa: {}".format(text), xbmc.LOGINFO)
-

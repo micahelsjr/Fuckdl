@@ -166,7 +166,7 @@ def get_cdm(service, profile=None, cdm_name=None):
     if not cdm_name:
         cdm_name = config.cdm.get(service) or config.cdm.get("default")
     if not cdm_name:
-        raise ValueError("A CDM to use wasn't listed in the vinetrimmer.yml config")
+        raise ValueError("A CDM to use wasn't listed in the fuckdl.yml config")
     if isinstance(cdm_name, dict):
         if not profile:
             raise ValueError("CDM config is mapped for profiles, but no profile was chosen")
@@ -307,7 +307,7 @@ def get_credentials(service, profile="default"):
     max_content_width=116,  # max PEP8 line-width, -4 to adjust for initial indent
     default_map=config.arguments
 ))
-@click.option("--debug", is_flag=True, hidden=True)  # Handled by vinetrimmer.py
+@click.option("--debug", is_flag=True, hidden=True)  # Handled by fuckdl.py
 @click.option("-p", "--profile", type=str, default=None,
               help="Profile to use when multiple profiles are defined for a service.")
 @click.option("-q", "--quality", callback=quality_param, default=None,

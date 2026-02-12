@@ -65,4 +65,3 @@ def getLogger(name: Optional[str] = None, level: int = logging.NOTSET) -> Logger
     _log = _loggers.get(name, Logger(name))
     _log.setLevel(level)
     return _log
-

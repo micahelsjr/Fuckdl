@@ -22,4 +22,3 @@ class device(Service):
         except JSONDecodeError:
             raise Exception(f"An unexpected response occurred for bamsdk.createDeviceGrant: {res.text}")
         return data
-

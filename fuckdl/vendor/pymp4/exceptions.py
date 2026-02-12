@@ -18,4 +18,3 @@
 
 class BoxNotFound(Exception):
     pass
-

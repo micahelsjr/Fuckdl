@@ -277,4 +277,3 @@ class Spectrum(BaseService):
         ).text
         res = urllib.parse.parse_qs(r)
         self.oauth_data["oauth_token"] = res["oauth_token"][0]
-

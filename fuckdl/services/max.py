@@ -634,4 +634,3 @@ class Max(BaseService):
                 seen_urls.add(url)
 
         return unique_items
-

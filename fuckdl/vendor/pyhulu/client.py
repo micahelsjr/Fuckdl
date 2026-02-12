@@ -174,4 +174,3 @@ class HuluClient(object):
         return '<HuluClient session_key=%s>' % base64.b64encode(
             self.session_key
         ).decode('utf8')
-

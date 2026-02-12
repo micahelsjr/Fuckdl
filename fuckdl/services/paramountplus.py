@@ -465,4 +465,3 @@ class ParamountPlus(BaseService):
         session.headers.update(config.headers)
         session.cookies.update(self.cookies or {})
         return session
-

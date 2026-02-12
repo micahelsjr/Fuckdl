@@ -256,4 +256,3 @@ class GooglePlay(BaseService):
             sapisid=self.session.cookies.get("SAPISID")
         ).encode()).hexdigest()
         return f"SAPISIDHASH {timestamp}_{auth_hash}"
-

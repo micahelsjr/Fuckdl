@@ -389,4 +389,3 @@ class ResponseCode(Enum):
     INVALID_PSSH = -1001
     NOT_OWNED = -1002  # Title not owned in the requested quality
     INSUFFICIENT_SECURITY = -1021  # L1 required or the key used is revoked
-

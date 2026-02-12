@@ -17,4 +17,3 @@ class AdobePassVT(AdobePassIE, ABC):
                 }
             )
         )
-

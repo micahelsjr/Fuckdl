@@ -35,4 +35,3 @@ class Endpoint:
         if token:
             self.headers.update({"Authorization": self.headers["Authorization"].format(**token)})
         return self.headers
-

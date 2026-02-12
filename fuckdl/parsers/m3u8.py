@@ -118,4 +118,3 @@ def parse(master, source=None):
             extra=x
         ) for x in master.media if x.type == "SUBTITLES"]
     )
-

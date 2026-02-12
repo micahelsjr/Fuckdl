@@ -75,4 +75,3 @@ class Path(type(pathlib.Path())):
 
     def write_text(self, text, encoding="utf-8"):
         return super().write_text(text, encoding=encoding)
-

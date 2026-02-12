@@ -508,4 +508,3 @@ def parse(*, url=None, data=None, source, session=None, downloader=None):
     tracks_obj.add(tracks, warn_only=True)
 
     return tracks_obj
-

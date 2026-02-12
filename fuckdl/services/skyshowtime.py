@@ -453,4 +453,3 @@ class Skyshowtime(BaseService):
         )
 
         return me.status_code == 200
-

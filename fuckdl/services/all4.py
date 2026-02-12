@@ -235,4 +235,3 @@ class All4(BaseService):
         data = cipher.decrypt(token)[:-2]
         license_api, dec_token = data.decode().split("|")
         return dec_token.strip(), license_api.strip()
-

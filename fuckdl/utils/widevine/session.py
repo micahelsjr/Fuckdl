@@ -54,4 +54,3 @@ class Session:
         cenc_header = widevine.WidevineCencHeader()
         cenc_header.ParseFromString(pssh.init_data)
         return cenc_header
-

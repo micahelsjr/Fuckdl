@@ -12,21 +12,21 @@ https://addons.mozilla.org/en-US/firefox/addon/cookies-txt-one-click/
 
 and go to max.com and download the cookies, rename the file to default.txt and put it in
 
-vinetrimmer\Cookies\Max
+fuckdl\Cookies\Max
 
 For Amazon go to primevideo.com or amazon.com and download the cookies, rename the file to default.txt and put it in
 
-vinetrimmer\Cookies\Amazon
+fuckdl\Cookies\Amazon
 
 For AppleTVPlus go to tv.apple.com and download the cookies, rename the file to default.txt and put it in
 
-vinetrimmer\Cookies\AppleTVPlus
+fuckdl\Cookies\AppleTVPlus
 
 For iTunes go to tv.apple.com or music.apple.com and download the cookies, rename the file to default.txt and put it in
 
-vinetrimmer\Cookies\iTunes
+fuckdl\Cookies\iTunes
 
-5. For the services that need credentials like DisneyPlus, Crunchyroll, Crave, Videoland, ParamountPlus, All4, RakutenTV and BritBox add the credentials in \vinetrimmer\vinetrimmer.yml, edit the file with notepad++.
+5. For the services that need credentials like DisneyPlus, Crunchyroll, Crave, Videoland, ParamountPlus, All4, RakutenTV and BritBox add the credentials in \fuckdl\fuckdl.yml, edit the file with notepad++.
 
 5. For downloading the video of an episode from primevideo.com use
 
@@ -58,5 +58,4 @@ instead of Amazon add the service name
 
 the extra options will be added after the service name
 
-7. Make a folder for the SL2000 or SL3000 in \vinetrimmer\devices and add in it bgroupcert.dat and zgpriv.dat and edit vinetrimmer.yml for adding the name of the folder, vinetrimmer will create prd file and reprovisioning it every an hour.
-
+7. Make a folder for the SL2000 or SL3000 in \fuckdl\devices and add in it bgroupcert.dat and zgpriv.dat and edit fuckdl.yml for adding the name of the folder, fuckdl will create prd file and reprovisioning it every an hour.

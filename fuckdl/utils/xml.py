@@ -12,4 +12,3 @@ def load_xml(xml):
         elem.tag = etree.QName(elem).localname
     etree.cleanup_namespaces(root)
     return root
-

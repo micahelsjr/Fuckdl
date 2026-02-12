@@ -79,4 +79,3 @@ class Credential:
             # local file
             with open(uri, encoding="utf-8") as fd:
                 return cls.loads(fd.read())
-

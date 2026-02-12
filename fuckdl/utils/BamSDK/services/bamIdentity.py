@@ -18,4 +18,3 @@ class bamIdentity(Service):
         ).prepare()
         res = self.session.send(req)
         return res.json()
-

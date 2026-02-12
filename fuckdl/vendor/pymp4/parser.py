@@ -887,4 +887,3 @@ ContainerBox = Struct(
 )
 
 MP4 = GreedyRange(Box)
-

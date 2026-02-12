@@ -130,4 +130,3 @@ def merge_dict(*dicts):
                 merge_dict(node, value)
             else:
                 dest[key] = value
-

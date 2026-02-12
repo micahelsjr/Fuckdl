@@ -8,7 +8,7 @@ import os
 from fuckdl.utils.widevine.device import LocalDevice
 
 """
-Code to convert common folder/file structure to a vinetrimmer WVD.
+Code to convert common folder/file structure to a fuckdl WVD.
 """
 
 parser = argparse.ArgumentParser(

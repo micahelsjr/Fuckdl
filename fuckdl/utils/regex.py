@@ -8,4 +8,3 @@ def find(pattern, string, group=None):
             return m.group(group)
     else:
         return next(iter(re.findall(pattern, string)), None)
-

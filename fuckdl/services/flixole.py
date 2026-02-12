@@ -273,4 +273,3 @@ class FlixOle(BaseService):
             return r.json()
         except json.JSONDecodeError:
             raise ValueError(f"Failed to log in: {r.text}")
-

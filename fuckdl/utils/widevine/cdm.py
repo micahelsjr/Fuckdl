@@ -94,4 +94,3 @@ class Cdm:
         if device.type in [LocalDevice.Types.CHROME, LocalDevice.Types.PLAYREADY]:
             return get_random_bytes(16)
         raise ValueError(f"Device Type {device.type.name} is not implemented")
-

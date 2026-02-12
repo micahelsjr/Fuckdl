@@ -202,4 +202,3 @@ class TVNZ(BaseService):
             os.makedirs(os.path.dirname(cache_path), exist_ok=True)
             with open(cache_path, "w", encoding="utf-8") as fd:
                 json.dump({"access_token": self.access_token}, fd)
-

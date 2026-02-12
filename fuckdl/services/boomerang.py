@@ -212,4 +212,3 @@ class Boomerang(BaseService):
             "x-consumer-key": self.get_consumer_secret(),
             "authorization": f"Token {self.login()}",
         })
-

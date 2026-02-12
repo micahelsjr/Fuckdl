@@ -28,4 +28,3 @@ class account(Service):
             url=f"https://disney.api.edge.bamgrid.com/accounts/me/active-profile/{profile_id}",
             headers={"Authorization": f"Bearer {access_token}"},
         ).json()
-

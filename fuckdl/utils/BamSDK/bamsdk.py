@@ -26,4 +26,3 @@ class BamSdk:
         self.media = media(self.config["services"]["media"], self._session)
         self.session = session(self.config["services"]["session"], self._session)
         self.token = token(self.config["services"]["token"], self._session)
-

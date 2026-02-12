@@ -465,4 +465,3 @@ class BritBox(BaseService):
                 return m.group(group)
         else:
             return next(iter(re.findall(pattern, string)), None)
-

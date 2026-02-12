@@ -25,4 +25,3 @@ def dump():
     while fd.tell() < eof:
         box = Box.parse_stream(fd)
         print(box)
-

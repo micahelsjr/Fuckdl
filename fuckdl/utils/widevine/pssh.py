@@ -74,4 +74,3 @@ def convert_playready_pssh(pssh):
     kid_uuid = uuid.UUID(bytes_le=kid_bytes)
 
     return build_pssh(init_data=init_data.SerializeToString()),kid_uuid.hex
-

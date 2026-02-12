@@ -5,16 +5,18 @@ from datetime import datetime
 
 import click
 import coloredlogs
+
+from fuckdl.config import directories, filenames  # isort: split
+from fuckdl.commands import dl
+
+# Try to import colorama for colored ASCII art
 try:
     from colorama import Fore, Style, init
     init(autoreset=True)
     COLORAMA_AVAILABLE = True
 except ImportError:
     COLORAMA_AVAILABLE = False
-    Fore = Style = None
 
-from fuckdl.config import directories, filenames  # isort: split
-from fuckdl.commands import dl
 
 def get_ascii_art():
     """Generate ASCII art banner with red FuckDL text."""
@@ -44,7 +46,7 @@ def get_ascii_art():
     Playready and Widevine DRM downloader and decrypter                       
                                                                               
     +------------------------------------------------------------------+      
-    |                    Created By Barbie DRM                        |      
+    |                    Created By Barbie DRM                         |      
     |                  https://t.me/barbiedrm                          |      
     +------------------------------------------------------------------+      
                                                                               
@@ -53,33 +55,18 @@ def get_ascii_art():
     return banner
 
 
-class HelpGroup(click.Group):
-    def format_help(self, ctx, formatter):
-        """Override format_help to add ASCII art at the top."""
-        click.echo(get_ascii_art())
-        super().format_help(ctx, formatter)
-
-
-@click.group(cls=HelpGroup, context_settings=dict(
+@click.command(context_settings=dict(
     allow_extra_args=True,
     ignore_unknown_options=True,
     max_content_width=116,  # max PEP8 line-width, -4 to adjust for initial indent
-), invoke_without_command=True)
+))
 @click.option("--debug", is_flag=True, default=False,
               help="Enable DEBUG level logs on the console. This is always enabled for log files.")
-@click.pass_context
-def main(ctx, debug):
+def main(debug):
     """
     fuckdl is the most convenient command-line program to
     download videos from Playready and Widevine DRM-protected video platforms.
     """
-    # Skip logging setup if help is being shown
-    if "--help" in sys.argv or "-h" in sys.argv or "-?" in sys.argv:
-        if ctx.invoked_subcommand is None:
-            return
-        # For subcommand help, still skip logging
-        return
-    
     LOG_FORMAT = "{asctime} [{levelname[0]}] {name} : {message}"
     LOG_DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
     LOG_STYLE = "{"
@@ -110,11 +97,11 @@ def main(ctx, debug):
         handlers=[logging.StreamHandler()],
     )
 
+    # Display ASCII art banner
+    print(get_ascii_art())
+
     log = logging.getLogger("vt")
 
-    # Display ASCII art banner with credit
-    click.echo(get_ascii_art())
-    
     log.info("fuckdl - Playready and Widevine DRM downloader and decrypter")
     log.info(f"[Root Config]     : {filenames.user_root_config}")
     log.info(f"[Service Configs] : {directories.service_configs}")
@@ -127,15 +114,10 @@ def main(ctx, debug):
     
     os.environ['PATH'] = os.path.abspath('./binaries')
 
-    # If no subcommand was invoked, call dl() for backward compatibility
-    if ctx.invoked_subcommand is None:
-        if len(sys.argv) > 1 and sys.argv[1].lower() == "dl":
-            sys.argv.pop(1)
-        dl()
+    if len(sys.argv) > 1 and sys.argv[1].lower() == "dl":
+        sys.argv.pop(1)
 
-
-# Add dl as a subcommand
-main.add_command(dl)
+    dl()
 
 
 if __name__ == "__main__":

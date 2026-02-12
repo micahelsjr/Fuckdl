@@ -206,4 +206,3 @@ class Titles(list):
         for title in self:
             if title.is_wanted(wanted):
                 yield title
-

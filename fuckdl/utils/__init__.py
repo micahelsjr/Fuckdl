@@ -61,4 +61,3 @@ def try_get(obj, func):
         
 def short_hash(input):
     return base_encode(int(md5(input).hexdigest(), 16))
-

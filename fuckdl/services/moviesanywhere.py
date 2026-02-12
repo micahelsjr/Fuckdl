@@ -200,4 +200,3 @@ class MoviesAnywhere(BaseService):
                 "Authorization": f"Bearer {self.access_token}",
             }
         )
-

@@ -29,4 +29,3 @@ def chrome_esn_generator():
         esn =  f.read()
 
     return esn
-

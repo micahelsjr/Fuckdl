@@ -168,4 +168,3 @@ class CTV(BaseService):
             }
         ).json()["data"]["resolvedPath"]["lastSegment"]["content"]["id"]
         print(f"Got axis title id: {self.title}")
-

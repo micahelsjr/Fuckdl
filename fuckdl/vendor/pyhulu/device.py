@@ -29,4 +29,3 @@ class Device(object):  # pylint: disable=too-few-public-methods
             self.device_code,
             base64.b64encode(self.device_key).decode('utf8')
         )
-

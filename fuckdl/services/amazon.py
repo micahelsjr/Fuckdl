@@ -43,7 +43,7 @@ class Amazon(BaseService):
     Use 'Amazon Video ASIN Display' for Tampermonkey addon for ASIN
     https://greasyfork.org/en/scripts/381997-amazon-video-asin-display
     
-    vt dl --list -z uk -q 1080 Amazon B09SLGYLK8 
+    fuckdl dl --list -z uk -q 1080 Amazon B09SLGYLK8 
     """
 
     ALIASES = ["AMZN", "amazon"]
@@ -1962,4 +1962,3 @@ class Amazon(BaseService):
             if "error" in res:
                 raise self.log.exit(f"Unable to get code pair: {res['error_description']} [{res['error']}]")
             return res
-

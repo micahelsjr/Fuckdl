@@ -140,4 +140,3 @@ class Filmio(BaseService):
             cookie_jar.set_cookie(cookie)
         os.makedirs(os.path.dirname(self.cookie_file), exist_ok=True)
         cookie_jar.save(ignore_discard=True)
-

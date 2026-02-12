@@ -284,4 +284,3 @@ class Hulu(BaseService):
             version=self.config["device"].get("device_version"),
             **self.playback_params
         )
-

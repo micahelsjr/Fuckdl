@@ -163,4 +163,3 @@ class DiscoveryPlus(BaseService):
             "x-disco-client": "WEB:UNKNOWN:dplus_us:1.15.0",
             "x-disco-params": "realm=go,siteLookupKey=dplus_us,features=ar",
         })
-

@@ -373,4 +373,3 @@ class Hotstar(BaseService):
             self.log.exit(f" - Login failed: {data['description']} [{data['errorCode']}]")
             raise
         return data["description"]["userIdentity"]
-
