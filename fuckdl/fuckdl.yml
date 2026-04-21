@@ -63,11 +63,7 @@ key_vaults:
   - type: 'local'
     name: 'Local'
     path: '{data_dir}/key_store.db'
-
-  - type: 'httpapi'
-    name: vault
-    host: http://api.drmlab.io/vault/
-    password: gEX75q7I5YVkvgF5SUkcNd41IbGrDtTT
+    
 
 output_template:
   movies: '{title}.{year}.{quality}.{source}.WEB-DL.{audio}.{video}-{tag}'
